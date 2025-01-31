@@ -1,0 +1,71 @@
+/* Flex container */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between flex items */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Basic styling for the dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make the button full width */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Ensure the dropdown takes full width */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: block; /* Always visible for animation */
+    position: relative; /* Keep it in the document flow */
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 1;
+    width: 100%; /* Make the dropdown content full width */
+    max-height: 0; /* Start with no height */
+    overflow: hidden; /* Hide overflow during animation */
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out; /* Smooth transition */
+    opacity: 0; /* Start fully transparent */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: var(--tertiary-color);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    max-height: 200px; /* Adjust based on content height */
+    opacity: 1; /* Fade in */
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: var(--tertiary-color);
+}
+
+/* Styling for the content below the dropdown */
+.content-below {
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+}
